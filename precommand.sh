@@ -4,10 +4,12 @@
 # then
 
 git clone https://github.com/opencv/opencv.git
-git clone https://github.com/opencv/opencv_contrib.git
+cd opencv && git checkout 3.4 && cd ..
 
-cd ~/opencv
-mkdir build
+#git clone https://github.com/opencv/opencv_contrib.git
+
+cd opencv
+mkdir -p build
 cd build
 
 

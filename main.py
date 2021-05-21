@@ -3,6 +3,7 @@ def next_step(step: str, l: list):
     return l[(i + 1) % len(l)]
 
 
+relative_path_from_root = 'WIDER_train/images/'
 positive_data = []
 negative_data = []
 
@@ -35,7 +36,7 @@ with open('wider_face_split/wider_face_train_bbx_gt.txt', 'r') as f:
         if step == steps[0]:
             name = line[:-1]
             step = next_step(step, steps)
-            o['name'] = name
+            o['name'] = relative_path_from_root + name
         elif step == steps[1]:
             items = int(line)
             o['items'] = items
@@ -51,10 +52,14 @@ with open('wider_face_split/wider_face_train_bbx_gt.txt', 'r') as f:
 print(len(positive_data))
 print(len(negative_data))
 
-with open('wider_face_split/positive.info', 'w') as f:
+with open('positive.info', 'w') as f:
     for o in positive_data:
         f.write(o['name'] + ' ' + str(o['items']) + ' ' + ' '.join(o['box']) + '\n')
 
-with open('wider_face_split/negative.info', 'w') as f:
+with open('negative.info', 'w') as f:
     for o in negative_data:
         f.write(o['name'] + '\n')
+
+with open('log/main_run.log', 'w') as f:
+    f.write(f"Positive: {len(positive_data)}\n")
+    f.write(f"Negative: {len(negative_data)}\n")
