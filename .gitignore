@@ -11,7 +11,8 @@ build/
 .idea
 data/
 log/
-/generated/
+/*.dat
+/*.vec
 .ipynb_checkpoints
 model_visualization.avi
 

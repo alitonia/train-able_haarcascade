@@ -61,11 +61,11 @@ for (dirpath, dirnames, filenames) in walk('archive/natural_images'):
 print(f"Positive: {len(positive_data)}")
 print(f"Negative: {len(negative_data)}")
 
-with open('generated/positive.dat', 'w') as f:
+with open('positive.dat', 'w') as f:
     for o in positive_data:
         f.write(o['name'] + ' ' + str(o['items']) + ' ' + ' '.join(o['box']) + '\n')
 
-with open('generated/negative.dat', 'w') as f:
+with open('negative.dat', 'w') as f:
     for o in negative_data:
         f.write(o['name'] + '\n')
 
