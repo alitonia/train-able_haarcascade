@@ -1,8 +1,3 @@
-# goto http://shuoyang1213.me/WIDERFACE/
-# download face annotation, put in root of this repo
-# run generate.py
-# then
-
 printf "cloning opencv source\n"
 git clone https://github.com/opencv/opencv.git
 
