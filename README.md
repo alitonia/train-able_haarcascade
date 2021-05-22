@@ -7,7 +7,7 @@ The repo shows steps to train a face detection model with haar cascade of OpenCv
 ### Required environment
 
 * Linux
-* Installed `python`, `cmake`, `make`
+* Installed `python`, `cmake`, `make`, `tbb`
 
 ### Prepare repo (run only one time)
 

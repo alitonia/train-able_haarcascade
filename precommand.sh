@@ -10,7 +10,7 @@ cd opencv || exit
 mkdir -p build
 cd build || exit
 
-cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
+cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_TBB=ON ..
 
 make -j7
 
