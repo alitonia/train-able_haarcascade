@@ -10,6 +10,10 @@ relative_path_to_wider_images_from_root = 'WIDER_train/images/'
 positive_data = []
 negative_data = []
 
+#outF = open("wider_face_split/wider_face_train_bbx_gt.txt", "w")
+#outF.write("FOOOO")
+#outF.close()
+
 # wider face images
 with open('wider_face_split/wider_face_train_bbx_gt.txt', 'r') as f:
     name = ''
