@@ -15,5 +15,7 @@ log/
 /*.vec
 .ipynb_checkpoints
 model_visualization.avi
+/model
 
 !test.png
+!model/default_cascade.xml
